@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Royal Byte Design System - Premium IT Company */
+
+@layer base {
+  :root {
+    /* Royal Dark Theme - Primary */
+    --background: 222 47% 6%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 8%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 8%;
+    --popover-foreground: 210 40% 98%;
+
+    /* Royal Blue */
+    --primary: 217 91% 60%;
+    --primary-foreground: 222 47% 6%;
+
+    /* Gold Accent */
+    --secondary: 43 74% 49%;
+    --secondary-foreground: 222 47% 6%;
+
+    --muted: 222 30% 14%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 43 74% 49%;
+    --accent-foreground: 222 47% 6%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 222 30% 18%;
+    --input: 222 30% 18%;
+    --ring: 217 91% 60%;
+
+    --radius: 0.75rem;
+
+    /* Royal Byte Custom Colors */
+    --royal-navy: 222 47% 6%;
+    --royal-navy-light: 222 40% 12%;
+    --royal-blue: 217 91% 60%;
+    --royal-blue-dark: 217 91% 45%;
+    --royal-gold: 43 74% 49%;
+    --royal-gold-light: 43 74% 65%;
+    --royal-cream: 45 30% 96%;
+    --royal-silver: 220 14% 75%;
+
+    /* Gradients */
+    --gradient-royal: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(222 47% 20%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(43 74% 49%) 0%, hsl(35 80% 55%) 100%);
+    --gradient-dark: linear-gradient(180deg, hsl(222 47% 6%) 0%, hsl(222 47% 10%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(222 47% 10%) 0%, hsl(222 47% 6%) 100%);
+    --gradient-hero: radial-gradient(ellipse at top, hsl(217 91% 60% / 0.15) 0%, transparent 50%);
+    
+    /* Shadows */
+    --shadow-royal: 0 25px 50px -12px hsl(217 91% 60% / 0.25);
+    --shadow-gold: 0 10px 40px -10px hsl(43 74% 49% / 0.3);
+    --shadow-card: 0 4px 20px hsl(222 47% 4% / 0.5);
+
+    --sidebar-background: 222 47% 8%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 222 47% 6%;
+    --sidebar-accent: 222 30% 14%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 222 30% 18%;
+    --sidebar-ring: 217 91% 60%;
+  }
+
+  .dark {
+    --background: 222 47% 6%;
+    --foreground: 210 40% 98%;
+    --card: 222 47% 8%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222 47% 8%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 222 47% 6%;
+    --secondary: 43 74% 49%;
+    --secondary-foreground: 222 47% 6%;
+    --muted: 222 30% 14%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 43 74% 49%;
+    --accent-foreground: 222 47% 6%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 222 30% 18%;
+    --input: 222 30% 18%;
+    --ring: 217 91% 60%;
+    --sidebar-background: 222 47% 8%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 222 47% 6%;
+    --sidebar-accent: 222 30% 14%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 222 30% 18%;
+    --sidebar-ring: 217 91% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer components {
+  .text-gradient-royal {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(43 74% 65%) 100%);
+  }
+
+  .text-gradient-gold {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(43 74% 49%) 0%, hsl(35 80% 55%) 100%);
+  }
+
+  .bg-gradient-royal {
+    background: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(222 47% 20%) 100%);
+  }
+
+  .bg-gradient-card {
+    background: linear-gradient(145deg, hsl(222 47% 10%) 0%, hsl(222 47% 6%) 100%);
+  }
+
+  .glow-royal {
+    box-shadow: 0 0 60px hsl(217 91% 60% / 0.3);
+  }
+
+  .glow-gold {
+    box-shadow: 0 0 40px hsl(43 74% 49% / 0.2);
+  }
+
+  .glass-card {
+    @apply backdrop-blur-xl border;
+    background: hsl(222 47% 8% / 0.8);
+    border-color: hsl(222 30% 20% / 0.5);
+  }
+}
