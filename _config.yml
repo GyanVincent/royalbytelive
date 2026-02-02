@@ -1,0 +1,19 @@
+# Disable Jekyll processing
+exclude: 
+  - node_modules
+  - src
+  - package.json
+  - package-lock.json
+  - tsconfig.json
+  - vite.config.ts
+  - .gitignore
+  - README.md
+
+# Set empty layout to prevent Jekyll errors
+markdown: kramdown
+highlighter: rouge
+plugins: []
+
+# Minimal configuration
+baseurl: "/royalbyte-main"
+url: "https://gyanvincent.github.io"
